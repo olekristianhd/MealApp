@@ -5,13 +5,15 @@ import 'package:meals_app/widgets/category_grid_item.dart';
 import 'package:meals_app/screens/meals.dart';
 import 'package:meals_app/models/category.dart';
 
+/// Represents a screen that displays categories and their respective meals.
 class CategoriesScreen extends StatefulWidget {
+  /// The list of available meals to be displayed.
+  final List<Meal> availableMeals;
+
   const CategoriesScreen({
     Key? key,
     required this.availableMeals,
   }) : super(key: key);
-
-  final List<Meal> availableMeals;
 
   @override
   _CategoriesScreenState createState() => _CategoriesScreenState();

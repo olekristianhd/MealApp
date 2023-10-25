@@ -1,24 +1,30 @@
 import 'package:flutter/material.dart';
 import 'package:transparent_image/transparent_image.dart';
-
 import 'package:meals_app/widgets/meal_item_trait.dart';
 import 'package:meals_app/models/meal.dart';
 
+/// Represents an item displaying a particular meal.
 class MealItem extends StatelessWidget {
-  const MealItem({
-    super.key,
-    required this.meal,
-    required this.onSelectMeal,
-  });
-
+  /// The meal associated with the item.
   final Meal meal;
+
+  /// The function called when the meal item is selected.
   final void Function(Meal meal) onSelectMeal;
 
+  /// Constructs a MealItem with the provided [meal] and [onSelectMeal] function.
+  const MealItem({
+    Key? key,
+    required this.meal,
+    required this.onSelectMeal,
+  }) : super(key: key);
+
+  /// Returns the text representation of the meal complexity.
   String get complexityText {
     return meal.complexity.name[0].toUpperCase() +
         meal.complexity.name.substring(1);
   }
 
+  /// Returns the text representation of the meal affordability.
   String get affordabilityText {
     return meal.affordability.name[0].toUpperCase() +
         meal.affordability.name.substring(1);
@@ -61,7 +67,7 @@ class MealItem extends StatelessWidget {
                       maxLines: 2,
                       textAlign: TextAlign.center,
                       softWrap: true,
-                      overflow: TextOverflow.ellipsis, // Very long text ...
+                      overflow: TextOverflow.ellipsis,
                       style: const TextStyle(
                         fontSize: 20,
                         fontWeight: FontWeight.bold,

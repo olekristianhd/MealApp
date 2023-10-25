@@ -1,9 +1,15 @@
 import 'package:flutter/material.dart';
 
+/// Represents the main drawer for the application.
 class MainDrawer extends StatelessWidget {
-  const MainDrawer({super.key, required this.onSelectScreen});
-
+  /// The function called when a screen is selected from the drawer.
   final void Function(String identifier) onSelectScreen;
+
+  /// Constructs a MainDrawer with the provided [onSelectScreen] function.
+  const MainDrawer({
+    Key? key,
+    required this.onSelectScreen,
+  }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -35,9 +41,9 @@ class MainDrawer extends StatelessWidget {
                 const SizedBox(width: 18),
                 Text(
                   'Cooking Up!',
-                  style: Theme.of(context).textTheme.titleLarge!.copyWith(
-                        color: Theme.of(context).colorScheme.primary,
-                      ),
+                  style: Theme.of(context).textTheme.headline4!.copyWith(
+                    color: Theme.of(context).colorScheme.primary,
+                  ),
                 ),
               ],
             ),
@@ -50,10 +56,10 @@ class MainDrawer extends StatelessWidget {
             ),
             title: Text(
               'Meals',
-              style: Theme.of(context).textTheme.titleSmall!.copyWith(
-                    color: Theme.of(context).colorScheme.onBackground,
-                    fontSize: 24,
-                  ),
+              style: Theme.of(context).textTheme.headline6!.copyWith(
+                color: Theme.of(context).colorScheme.onBackground,
+                fontSize: 24,
+              ),
             ),
             onTap: () {
               onSelectScreen('meals');
@@ -67,10 +73,10 @@ class MainDrawer extends StatelessWidget {
             ),
             title: Text(
               'Filters',
-              style: Theme.of(context).textTheme.titleSmall!.copyWith(
-                    color: Theme.of(context).colorScheme.onBackground,
-                    fontSize: 24,
-                  ),
+              style: Theme.of(context).textTheme.headline6!.copyWith(
+                color: Theme.of(context).colorScheme.onBackground,
+                fontSize: 24,
+              ),
             ),
             onTap: () {
               onSelectScreen('filters');
