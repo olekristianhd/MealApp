@@ -46,7 +46,6 @@ meal_planning/
 │   ├── providers/
 │   │   ├── favorites_provider.dart
 │   │   ├── filters_provider.dart
-│   │   ├── meal_search_delegate.dart
 │   │   └── meals_provider.dart
 │   │
 │   ├── screens/
