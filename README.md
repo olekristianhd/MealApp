@@ -18,7 +18,7 @@ The Meal Planning App provides users with an organized platform to discover, pla
 - Ability to view specific meal details including ingredients and steps.
 - Filtering meals based on dietary preferences (e.g., gluten-free, vegetarian).
 - Mark meals as favorites for quicker access.
-- Dynamic search functionality to find meals.
+- Dynamic search functionality to find categoreis.
 - A navigational drawer for additional app features and settings.
 - App respects device's light or dark mode preferences.
 
@@ -32,6 +32,7 @@ The Meal Planning App provides users with an organized platform to discover, pla
 
 ## 4. File and Folder Structure
 
+```plaintext
 meal_planning/
 │
 ├── lib/
@@ -68,7 +69,7 @@ meal_planning/
 │
 ├── pubspec.yaml
 └── README.md
-
+```
 - **data**: Contains the dummy data source for the application.
 - **models**: Holds the data structures and classes used.
 - **providers**: Manages state and data throughout the app.
